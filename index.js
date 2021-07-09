@@ -211,7 +211,9 @@ const BotCommands = {
                 else {
                     // Has the user already submitted the max amount of times?
                     if (chatU.timesSubmitted < maxSubmits) {
-                        if (chatU.banned) {
+                        // Is the user not banned?
+                        if (!chatU.banned) {
+                            // Is the word short enough?
                             if (sub.length <= MaxSubmitCharLength) {
                                 // Try to add to list
                                 const dupEntry = SubmitPrompt(sub, chatU);

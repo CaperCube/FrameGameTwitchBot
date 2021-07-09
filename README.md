@@ -39,18 +39,20 @@ Here's some beginner / intermediate level instructions to get this bot up and ru
 1. Install dev environment (I like VSCode)
 2. Install Node.js on your system
 3. Create a directory on your system to contain this bot app
-4. npm init your app and take note of the app entry name (i.e. `index.js`)
-5. Paste this code into the app entry file (i.e. `index.js`)
-6. The project requires `tmi.js` and `dotenv` so run the command `npm install` (see step 10 for running terminal commands)
-7. Crate a file called `.env` in the bot's root directory (wherever your `index.html` file is)
-8. Obtain your OAuth code here at [twitchapps](https://twitchapps.com/tmi/)
+4. (If Using VSCode) Open your bot directory using *File > Open Folder*, then click *Terminal > New Terminal* in the top bar
+5. The project requires `tmi.js` and `dotenv` so run the command `npm install` in the terminal
+6. Create a file called `.env` in the bot's root directory (wherever your `index.html` file is)
+7. Obtain your OAuth code here at [twitchapps](https://twitchapps.com/tmi/)
     * **!!WARNING!!**  THIS OAUTH CODE GIVES PERMISSIONS TO YOUR TWITCH ACCOUNT!! DO NOT SHOW THIS TO ANYONE! I mean, unless you really trust them or something, but it's best if you don't.
-9. Fill in the `.env` file like so: (replace everything in [] with your info)
+8. Fill in the `.env` file like so: (replace everything in [] with your info)
+    * `# The twitch chanel the bot will join`
     * `TWITCH_CHANNEL = [your-twitch-username]`
+    * `# The name of the user the bot will use`
     * `TWITCH_BOTNAME = [Your-Bots-Name]`
+    * `# The OAUTH code for the user the bot will use`
     * `OAUTH_CODE = [oauth:******************************]`
-10. (If Using VSCode) Click *Terminal > New Terminal* in the top bar, type `node .` in the terminal, and hit enter to start the bot
-11. Close VSCode or click in the terminal and press `Ctrl + c` to stop the bot
+9. Type `node .` in the terminal, and hit enter to start the bot
+10. Close VSCode or click in the terminal and press `Ctrl + c` to stop the bot
 
 -----------------------------------------------------------
 ## How to use:
