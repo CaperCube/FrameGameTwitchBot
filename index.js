@@ -149,7 +149,7 @@ const BotCommands = {
         description: "Displays information about this bot.",
         function: function(client, channel, tags, message, self, mentionMe, args, IAmAMod) {
             // Explain this bot
-            client.say(channel, mentionMe + `, Hi, I'm a bot made by @CaperCube to help Twitch viewers submit prompts to streamer's Frame Game sessions.`);
+            client.say(channel, mentionMe + `, Hi, I'm a bot made by @CaperCube to help Twitch viewers submit prompts to streamer's Frame Game sessions. Type "!submit <prompt>" to submit a prompt`);
         }
     },
     about: {
@@ -275,7 +275,7 @@ const BotCommands = {
             // Reset user submit counters
             ResetSubmitCounters();
 
-            client.say(channel, `Submissions for prompts are now open! ${promptListSize} prompts will will accepted.`);
+            //client.say(channel, `Submissions for prompts are now open! ${promptListSize} prompts will will accepted.`);
         }
     },
     close: {
@@ -564,8 +564,7 @@ function SearchListByName(uName) {
 // Resets all user submit counters
 function ResetSubmitCounters() {
     for (u in chatUsers) {
-        if (u.userName === uName && chatUser == null) {
-            chatUser = u;
+        if (u != null) {
             u.timesSubmitted = 0;
         }
     }
